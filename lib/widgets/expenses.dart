@@ -3,6 +3,7 @@ import 'package:flutter_expense_tracker/widgets/expense_list/expenses_list.dart'
 import 'package:flutter_expense_tracker/widgets/new_expense.dart';
 
 import '../models/expense.dart';
+import 'chart/chart.dart';
 
 class Expenses extends StatefulWidget {
   const Expenses({super.key});
@@ -92,7 +93,7 @@ class _ExpensesState extends State {
       ),
       body: Column(
         children: [
-          Text("The chart"),
+          Chart(expenses: _registeredExpenses),
           Expanded(child: mainContent),
         ],
       ),
